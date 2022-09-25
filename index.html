@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja ">
+<head>
+    <meta charset="UTF-8">
+    <title>天気予報アプリ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="w-full bg-slate-300 p-4">
+        <h1 class="text-2xl font-bold">天気予報アプリ</h1>
+    </header>
+
+    <main class="space-y-4 p-6">
+        <section>
+            <h2 class="text-xl font-bold">今日の日付: <span id="today"></span></h2>
+        </section>
+
+        <section>
+            <form id="form">
+                <h2 class="text-xl font-bold">
+                    <p><label for="place">場所を選択して下さい</label></p>
+                    場所:
+                    <select id="place">
+                        <option value="tokushima">徳島</option>
+                        <option value="katsura">勝浦</option>
+                        <option value="narutaki">鳴滝</option>
+                        <option value="kamikatsu">上勝</option>
+                    </select>
+                </h2>
+            </form>
+        </section>
+
+        <section>
+            <h2 class="text-xl font-bold">
+                今日の天気: <span id="weather"></span>
+            </h2>
+            <img src="./img/Clouds.jpg" id="weatherimg">
+            <h2 class="text-xl font-bold">
+                過去の天気: <span id="history"></span>
+            </h2>
+        </section>
+        
+    </main>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.3/dayjs.min.js"></script>
+<script src="./main.js" ></script>
+</html>
